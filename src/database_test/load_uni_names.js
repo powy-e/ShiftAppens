@@ -15,6 +15,8 @@ export default async function load_uni_names() {
     }
     ).catch((e) => { console.log(e); return "ERROR: Can't find universities" });
 
+    db.$disconnect();
+
     return universities;
 }
 

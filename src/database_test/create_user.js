@@ -13,5 +13,8 @@ export default async function create_user(email, name, password) {
         }
     }).catch((e) => { console.log(e); return "ERROR: Can't create user" });
 
+    db.$disconnect();
+
     return true;
 }
+

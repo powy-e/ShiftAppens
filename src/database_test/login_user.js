@@ -14,5 +14,7 @@ export default async function login_user(_email, _password) {
 
     if (!user_info) return false;
 
+    db.$disconnect();
+
     return (user_info.id, user_info.name, user_info.university);
 }

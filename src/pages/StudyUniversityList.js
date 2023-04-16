@@ -22,7 +22,7 @@ const StudyUniversityList = () => {
               <h2 className="text-lg font-semibold">{university.name}</h2>
               <ul className="m-0 p-0">
                 <li className="flex justify-center items-center">
-                  <Link href={`/${university.short}study`} className="m-4 text-black bg-indigo-300 py-3 px-6 rounded-full font-bold hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Select</Link>
+                  <Link href={`/study/${university.short}study`} className="m-4 text-black bg-indigo-300 py-3 px-6 rounded-full font-bold hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Select</Link>
                 </li>
               </ul>
             </div>

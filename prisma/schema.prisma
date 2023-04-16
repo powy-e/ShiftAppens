@@ -40,21 +40,19 @@ model Canteen {
 }
 
 model University {
-  id        String          @id @default(uuid())
-  name      String          @unique
-  shortName String?         @unique
+  id        String    @id @default(uuid())
+  name      String    @unique
+  shortName String?   @unique
   imageURL  String?
   canteens  Canteen[]
   User      User[]
-  reviews   CanteenReview[]
 }
 
 model CanteenReview {
-  id           String      @id @default(uuid())
-  canteen      Canteen     @relation(fields: [canteenId], references: [id])
-  canteenId    String
-  rating       Int
-  comment      String?
-  University   University? @relation(fields: [universityId], references: [id])
-  universityId String?
+  id            String  @id @default(uuid())
+  canteen       Canteen @relation(fields: [canteenId], references: [id])
+  canteenId     String
+  canteenRating Int
+  foodRating    Int
+  comment       String?
 }

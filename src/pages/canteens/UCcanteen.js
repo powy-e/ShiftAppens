@@ -18,6 +18,18 @@ export async function getServerSideProps() {
 
 
 function UCcanteen(props) {
+  const [text, setText] = useState('Join the Q');
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    if (clicked) {
+      setText('Join room');
+      fetch("/api/canteens/join/1");
+    } else {
+      setText('You joined the Q');
+    }
+    setClicked(!clicked);
+  };
 
   return (
     <div className="bg-gray-100">
@@ -45,7 +57,10 @@ function UCcanteen(props) {
       <section className="mt-12 mb-12 px-6">
         <h2 className="text-3xl font-bold text-center mb-8">Cantina São Jerónimo - Edifício S. Jerónimo, Hospital Velho</h2>
         <li className="flex justify-center m-5">
+          <div className="space-x-5">
+        <Link href="#" className=" mr-5 text-black bg-indigo-300 py-3 px-6 rounded-full font-bold focus:text-white focus:bg-gray-500   "onClick={(handleClick)}>{text}</Link>
           <Link href="/ISTreview" className=" text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Review</Link>
+          </div>
         </li>
         <div className="flex flex-col sm:flex-row justify-center space-y-8 sm:space-x-8 sm:space-y-0">
           <div className="bg-white p-8 rounded-lg shadow-lg flex-1">
@@ -91,7 +106,7 @@ function UCcanteen(props) {
             <p className="text-gray-600">Mochi</p>
 
             <p className=" font-bold text-gray-600">Custo de Refeição:</p>
-            <p className="text-gray-600">$2.80 - Mediante a apresentação de cartão de estudante da Ulisboa</p>
+            <p className="text-gray-600">$2.65 - Mediante a apresentação de cartão de estudante </p>
             <p className="text-gray-600">$5.50 - Externos</p>
           </div>
         </div>
