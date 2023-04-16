@@ -1,4 +1,4 @@
-import {PrismaClient} from '@prisma/client'
+import { PrismaClient } from '@prisma/client'
 
 
 export default async function canteens_by_university(university_name) {
@@ -12,14 +12,14 @@ export default async function canteens_by_university(university_name) {
         include: {
             canteens: {
                 select: {
-                capacity: true,
-                canteenName: true,
-                coordinates: true,
-                monday: true,
-            }
-        },
-    }
-}).catch((e) => { console.log(e); return "ERROR: Can't create user"});
+                    capacity: true,
+                    canteenName: true,
+                    coordinates: true,
+                    monday: true,
+                }
+            },
+        }
+    }).catch((e) => { console.log(e); return "ERROR: Can't create user" });
     return university.canteens;
 }
 

@@ -1,7 +1,7 @@
-import {PrismaClient} from '@prisma/client'
+import { PrismaClient } from '@prisma/client'
 
 
-export default async function create_user (email, name, password) {
+export default async function create_user(email, name, password) {
 
     const db = new PrismaClient()
 
@@ -9,9 +9,9 @@ export default async function create_user (email, name, password) {
         data: {
             email: email,
             name: name,
-            password: password,        
+            password: password,
         }
-    }).catch((e) => { console.log(e); return "ERROR: Can't create user"});
+    }).catch((e) => { console.log(e); return "ERROR: Can't create user" });
 
     return true;
 }
