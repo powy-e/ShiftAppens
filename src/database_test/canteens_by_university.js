@@ -7,7 +7,9 @@ export default async function canteens_by_university(university_name) {
 
     const university = await db.university.findFirst({
         where: {
-            name: university_name,
+            OR: 
+                [{ name: university_name }, { shortName: university_name }],
+            
         },
         include: {
             canteens: {
@@ -20,6 +22,8 @@ export default async function canteens_by_university(university_name) {
             },
         }
     }).catch((e) => { console.log(e); return "ERROR: Can't create user" });
+  
+
     return university.canteens;
 }
 

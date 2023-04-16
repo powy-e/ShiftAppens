@@ -3,7 +3,7 @@ import React, { Component, useState, useEffect } from 'react';
 import canteens_by_university from '../../database_test/canteens_by_university';
 import Canteen from '../../components/canteen';
 import Link from 'next/link';
-import { PrismaClient } from '@prisma/client'
+
 
 export async function getServerSideProps() {
   const data = await canteens_by_university('Universidade de Coimbra');
