@@ -45,7 +45,7 @@ export default function shortCanteen(props) {
 
 
             {canteens.map((canteen) => (
-                <Canteen canteen={canteen} />
+                <Canteen canteen={canteen} university={uni_info.shortName}/>
             ))}
 
 

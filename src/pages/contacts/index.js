@@ -9,7 +9,7 @@ function ContactPage() {
 {/* Hero section */}
 <section className="bg-indigo-500 py-20 px-6 text-center text-white">
   <h1 className="text-4xl font-bold mb-4">Welcome to QWatch!</h1>
-  <p className="text-lg mb-8">End unecessay qeues and full packed study rooms</p>
+  <p className="text-lg mb-8">Don't wait for success, QWatch it happen.</p>
   <Link href="/study" className="text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Join the Q</Link>
 </section>
 
@@ -43,6 +43,8 @@ QWatch is a comprehensive WebApp and MobileApp that enables users to check the q
 </div> */}
 <div className="ml-20 mb-8 text-left flex ">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png" className="h-16 mr-4 mx-16" alt="React Logo" />
+  <img src="https://static-00.iconduck.com/assets.00/brand-nextjs-icon-256x256-zm2coebd.png" className="h-16 mr-4 mx-16" alt="Next Logo" />
+
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" className="h-16 mr-4 mx-16 " alt="Tailwind Logo" />
   <img src="https://seeklogo.com/images/P/prisma-logo-3805665B69-seeklogo.com.png" className="h-16 mr-4 mx-16" alt="Prisma Logo" />
 </div>
