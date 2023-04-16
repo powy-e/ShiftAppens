@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Link from 'next/link'
 
 function UserPage() {
   return (
@@ -6,15 +6,15 @@ function UserPage() {
       {/* Navigation */}
       <nav className="flex justify-between items-center bg-white py-4 px-6 shadow-md">
         <div>
-          <a href="/" className="text-3xl font-bold text-indigo-500">QWatch</a>
+          <Link href="/" className="text-3xl font-bold text-indigo-500">QWatch</Link>
         </div>
         <div>
           <ul className="flex space-x-6 text-gray-600 ">
-            <li><a href="/" className="hover:text-black hover:font-bold">Home</a></li>
-            <li><a href="/cantine" className="hover:text-black hover:font-bold">Cantines</a></li>
-            <li><a href="/study" className="hover:text-black hover:font-bold">Study Rooms</a></li>
-            <li><a href="/profile" className="hover:text-black hover:font-bold">My Profile</a></li>
-            <li><a href="/contact" className="hover:text-black hover:font-bold" >Contact</a></li>
+            <li><Link href="/" className="hover:text-black hover:font-bold">Home</Link></li>
+            <li><Link href="/cantine" className="hover:text-black hover:font-bold">Cantines</Link></li>
+            <li><Link href="/study" className="hover:text-black hover:font-bold">Study Rooms</Link></li>
+            <li><Link href="/profile" className="hover:text-black hover:font-bold">My Profile</Link></li>
+            <li><Link href="/contacts" className="hover:text-black hover:font-bold" >Contact</Link></li>
           </ul>
         </div>
       </nav>
@@ -91,7 +91,7 @@ function UserPage() {
   <footer className="bg-gray-900 text-white py-10 px-6">
     <div className="flex justify-between items-center mb-8">
       <div>
-        <a href="/" className="text-3xl font-bold text-indigo-500">QWatch</a>
+        <Link href="/" className="text-3xl font-bold text-indigo-500">QWatch</Link>
         <p className="text-gray-600">Made with ❤️ by Roadtrip To Coimbra</p>
       </div>
       

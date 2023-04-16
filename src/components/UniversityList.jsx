@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const universities = [
   { name: 'Instituto Superior Técnico - IST', imageUrl: 'https://upload.wikimedia.org/wikipedia/pt/e/ed/IST_Logo.png' , short: 'IST'},
@@ -20,7 +22,7 @@ const UniversityList = () => {
               <h2 className="text-lg font-semibold">{university.name}</h2>
               <ul className="m-0 p-0">
                 <li className="flex justify-center items-center">
-                  <a href={`/${university.short}canteen`} className="m-4 text-black bg-indigo-300 py-3 px-6 rounded-full font-bold hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Select</a>
+                  <Link href={`/${university.short}canteen`} className="m-4 text-black bg-indigo-300 py-3 px-6 rounded-full font-bold hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Select</Link>
                 </li>
               </ul>
             </div>

@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function ISTreviewStudy() {
   return (
@@ -6,15 +8,15 @@ function ISTreviewStudy() {
       {/* Navigation */}
       <nav className="flex justify-between items-center bg-white py-4 px-6 shadow-md">
         <div>
-          <a href="/" className="text-3xl font-bold text-indigo-500">QWatch</a>
+          <Link href="/" className="text-3xl font-bold text-indigo-500">QWatch</Link>
         </div>
         <div>
           <ul className="flex space-x-6 text-gray-600 ">
-            <li><a href="/" className="hover:text-black hover:font-bold">Home</a></li>
-            <li><a href="/canteen" className="hover:text-black hover:font-bold">Canteens</a></li>
-            <li><a href="/study" className="hover:text-black hover:font-bold">Study Rooms</a></li>
-            <li><a href="/profile" className="hover:text-black hover:font-bold">My Profile</a></li>
-            <li><a href="/contact" className="hover:text-black hover:font-bold" >Contact</a></li>
+            <li><Link href="/" className="hover:text-black hover:font-bold">Home</Link></li>
+            <li><Link href="/canteen" className="hover:text-black hover:font-bold">Canteens</Link></li>
+            <li><Link href="/study" className="hover:text-black hover:font-bold">Study Rooms</Link></li>
+            <li><Link href="/profile" className="hover:text-black hover:font-bold">My Profile</Link></li>
+            <li><Link href="/contacts" className="hover:text-black hover:font-bold" >Contact</Link></li>
           </ul>
         </div>
       </nav>
@@ -25,7 +27,7 @@ function ISTreviewStudy() {
   <h1 className="text-4xl mb-4">Review </h1>
   <h1 className="text-4xl font-bold mb-4">Instituto Superior Técnico</h1>
   <p className="text-lg mb-8">Study Room</p>
-  <a href="/ISTcanteen" className="text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Cancel</a>
+  <Link href="/ISTcanteen" className="text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-gray-500 transition duration-300 ease-in-out">Cancel</Link>
 </section>
 
 <section className="my-12 px-6">
@@ -57,7 +59,7 @@ function ISTreviewStudy() {
       <label htmlFor="comment" className="text-lg font-semibold mb-2 block">Comment</label>
       <textarea name="comment" id="comment" rows="1" required className="border-gray-400 border-2 p-2 rounded-lg"></textarea>
     </div> */}
-    <a href="/ISTstudy" type="submit" className="text-center text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-indigo-500 transition duration-300 ease-in-out">Submit</a>
+    <Link href="/ISTstudy" type="submit" className="text-center text-black bg-indigo-300 py-3 px-6 rounded-full font-bold  hover:text-white hover:bg-indigo-500 transition duration-300 ease-in-out">Submit</Link>
   </form>
 </section>
 
@@ -69,14 +71,14 @@ function ISTreviewStudy() {
       <footer className="bg-gray-900 text-white py-10 px-6">
         <div className="flex justify-between items-center mb-8">
           <div>
-            <a href="/" className="text-3xl font-bold text-indigo-500">QWatch</a>
+            <Link href="/" className="text-3xl font-bold text-indigo-500">QWatch</Link>
             <p className="text-gray-600">Made with ❤️ by Roadtrip To Coimbra</p>
           </div>
           <div>
             <ul className="flex space-x-6">
-              <li><a href="#"><i className="fab fa-facebook fa-lg"></i></a></li>
-              <li><a href="#"><i className="fab fa-twitter fa-lg"></i></a></li>
-              <li><a href="#"><i className="fab fa-instagram fa-lg"></i></a></li>
+              <li><Link href="#"><i className="fab fa-facebook fa-lg"></i></Link></li>
+              <li><Link href="#"><i className="fab fa-twitter fa-lg"></i></Link></li>
+              <li><Link href="#"><i className="fab fa-instagram fa-lg"></i></Link></li>
             </ul>
           </div>
         </div>
