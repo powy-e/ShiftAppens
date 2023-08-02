@@ -35,7 +35,7 @@
     }
   },
   "devDependencies": {
-    "pnpm": "^8.2.0"
+    "pnpm": "^8.6.8"
   },
   "dependencies": {
     "@prisma/client": "4.13.0-dev.35",
